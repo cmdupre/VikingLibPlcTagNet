@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="VikingLibPlcTagNet/VikingLibPlcTagNet.csproj" />
+  <Project Path="VikingLibPlcTagNetTests/VikingLibPlcTagNetTests.csproj" />
+</Solution>

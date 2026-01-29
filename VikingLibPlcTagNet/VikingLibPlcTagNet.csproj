@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AssemblyVersion>1.5.0.0</AssemblyVersion>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Version>$(AssemblyVersion)</Version>
+	<Description>.Net wrapper for libplctag.
+Used for Techneaux ICS projects.</Description>
+	<PackageOutputPath>$(OutputPath)</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="libplctag.NativeImport" Version="1.0.41" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="VikingLibPlcTagNetTests" />
+	</ItemGroup>
+
+</Project>
