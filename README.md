@@ -5,8 +5,8 @@
 * Search/browse to include this package in the project
 
 ### When an update needs to be made to this library
-* Update *<AssemblyVersion>* in project file
-* Ensure *<GeneratePackageOnBuild>True</Gen..>* is set
+* Update *\<AssemblyVersion\>* in project file
+* Ensure *\<GeneratePackageOnBuild\>True\</Gen...\>* is set
 * Package will be output to *[USER]\source\repos\VikingLibPlcTagNet\VikingLibPlcTagNet\bin\Release*
 * Move this package to the local nuget directory specified above
 * Import/update as necessary
