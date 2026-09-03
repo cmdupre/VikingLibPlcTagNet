@@ -375,11 +375,16 @@ namespace VikingLibPlcTagNet.Data
                 .Where(n => n.Contains(nameFilter, StringComparison.InvariantCultureIgnoreCase));
         }
 
-        public IEnumerable<string> GetTagNamesFor(string programName, string nameFilter)
+        public IEnumerable<string> GetTagNamesFor(string programName, string nameFilter, DataTypes? type = null)
         {
-            return Tags
+            var tags = Tags
                 .Where(t => !t.IsUdt)
-                .Where(t => t.ProgramName == programName)
+                .Where(t => t.ProgramName == programName);
+
+            if (type is not null)
+                tags = tags.Where(t => t.Type == type);
+
+            return tags
                 .Select(t => t.Name)
                 .Where(n => n.Contains(nameFilter, StringComparison.InvariantCultureIgnoreCase));
         }
